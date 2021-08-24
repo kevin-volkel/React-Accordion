@@ -1,0 +1,41 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.question{
+  display: flex;
+  flex-direction: column;
+  width: 85vw;
+  max-width: 850px;
+  border: 3px solid $clr-grey-9;
+  border-radius: 3px;
+  box-shadow: $light-shadow;
+  padding: 1rem 1.5rem;
+  @include large{
+    width: 60vw;
+    max-width: 600px; 
+  }
+  .title{
+    display: flex;
+    justify-content: space-between;
+    h4{
+      margin: auto 0;
+      font-size: 0.875rem;
+      color: $clr-black;
+      font-weight: 600;
+      @include large{
+        font-size: 1rem;
+      }
+    }
+    button{
+      @include box(2rem);
+      font-size: 1.5rem;
+      border-radius: 50%;
+      color: $clr-primary-4;
+      background: $clr-grey-9;
+    }
+  }
+  .info{
+    color: $clr-black;
+  }
+}
